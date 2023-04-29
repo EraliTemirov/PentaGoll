@@ -7,6 +7,10 @@ const Sectionmini1 = () => {
   return (
     <div className='container1 '>
       <img src={bir} alt="rasm" className='w-100' />
+      <div className='asos_text'>
+      <p>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar oldidagi barcha maketlar</p>
+      <span>2 soat oldin</span>
+      </div>
       <div className='pt-3 d-flex  flex-wrap gap-1 justify-content-between'>
         <div className='w25'>
           <img src={ikki} alt="rasm"  className='w100' />

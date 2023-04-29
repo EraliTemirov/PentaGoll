@@ -22,14 +22,11 @@ const Section1 = () => {
   return (
     <div className='container1'>
 
+       
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
         {users.map((post) => (
-            <h1>{post.name}</h1>
+        <button className='btn btn-light'>{post.name}</button>
           ))}
-        <button className='btn btn-light'>@ Italiya.Seriya A</button>
-        <button  className='btn btn-light'>@ Italiya.Seriya A</button>
-        <button  className='btn btn-light'>@ Italiya.Seriya A</button>
-        <button  className='btn btn-light'>@ Italiya.Seriya A</button>
       </div>
       <div className='section1_1 d-flex justify-content-between mt-2 p-2 text-center flex-wrap'>
        <div>
