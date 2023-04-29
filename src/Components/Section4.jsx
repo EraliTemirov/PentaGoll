@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Section4 = () => {
   return (
     <div className='container1 '>
-       <h3 className='section4'>So'ngi yangiliklar</h3>
+       <h4 className='section4 ps-5 pt-2 pb-2'>So'ngi yangiliklar</h4>
        <div className='d-flex flex-wrap'>
         <div className='col-3'>
           <div className="home-box text-center p-3 m-2 color">

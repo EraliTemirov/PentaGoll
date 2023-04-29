@@ -25,6 +25,24 @@ div a{
         transform: scale(1.03);
     }
 }
+.footer div {
+    img{
+        cursor: pointer;
+        &:hover{
+            transform: scale(0.9);
+        }
+
+    }
+    span{
+        cursor: pointer;
+        &:hover{
+            color: aliceblue;
+        }
+    }
+}
+select{
+    font-size: 18px;
+}
 @for $i from 1 through 12 {
     .col-#{$i} { width: (100% / 12) * $i }
   }

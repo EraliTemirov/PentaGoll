@@ -7,12 +7,15 @@ import scaype from '../Imgs/Skype.png';
 import instagram from '../Imgs/Instagram.png';
 import facebook from '../Imgs/Facebook.png';
 import telegram from '../Imgs/Telegram.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <div className='container1'>
-      <div className='d-flex p-5 justify-content-between' >
-      <img src={logo} alt="logo"/>
+      <div className='d-flex p-5 justify-content-between footer' >
+      <Link to='/'>
+        <img src={logo} alt="logo"/>
+      </Link>
       <div className='w-50 d-flex justify-content-evenly'>
         <div>
         <span className='d-block fs-5'>Main</span>
@@ -36,14 +39,28 @@ const Footer = () => {
         <span className='d-block mt-3 fs-5'>Cybersport</span>
         </div>
       </div>
-      <div className='w-25 d-flex flex-wrap gap-4'>
-       <img src={twetter} alt="logo" />
-       <img src={youtube} alt="logo" />
-       <img src={vkontact} alt="logo" />
-       <img src={scaype} alt="logo" />
-       <img src={instagram} alt="logo" />
-       <img src={facebook} alt="logo" />
-       <img src={telegram} alt="logo" />
+      <div className='w-25 d-flex flex-wrap'>
+       <div className="col-3">
+            <img src={twetter} alt="logo" />
+       </div>
+       <div className="col-3">
+            <img src={youtube} alt="logo" />
+       </div>
+       <div className="col-3">
+            <img src={vkontact} alt="logo" />
+       </div>
+       <div className="col-3">
+            <img src={scaype} alt="logo" />
+       </div>
+       <div className="col-3">
+            <img src={instagram} alt="logo" />
+       </div>
+       <div className="col-3">
+            <img src={facebook} alt="logo" />
+       </div>
+       <div className="col-3">
+            <img src={telegram} alt="logo" />
+       </div>
       </div>
       </div>
       <hr className=' p-1 m-2 form-control fs-1 bg-light'/>

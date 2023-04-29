@@ -20,7 +20,7 @@ Yaqin kelajakda Tesla nafaqat Shanxay filialida elektromobillar ishlab chiqarish
 
   Xitoy Xalq Respublikasida yigilgan Tesla Model Y va Model 3 elektromobillari allaqachon Yevropaga eksport qilinmoqda.</p>
        </div>
-       <div className='w-25 mt-5 bg-light'>
+       <div className='w-25 mt-5 bg-light p-4 rounded'>
        <h3 className='mt-5'>Asosiy</h3>
         <div>
         
