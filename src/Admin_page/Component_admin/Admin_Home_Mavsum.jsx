@@ -56,14 +56,14 @@ const Admin_Home_Mavsum = () => {
        values={values.name_id}
        onChange={handelInputChange} />
 
-         <div className='mt-3 d-flex'>
+         <div className='mt-5 d-flex'>
             <input type="datetime-local" className='form-control m-2'/>
             <label className='fs-1' >:</label>
             <input type="datetime-local" className='form-control m-2' />
          </div>
         
         
-       <button className='btn btn-success w-25 m-3'>Yuklash</button>
+       <button className='btn btn-success w-25 mt-5'>Yuklash</button>
         </form>
       </div>
     </div>
