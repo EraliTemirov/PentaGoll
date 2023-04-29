@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
 const Sectionmini2 = () => {
+  const [table, setTable] = useState([]);
 
-
-
-  const [data, Setdata] = useState([]);
-
-
-//  useEffect(() => {
-//   fetch(`https://azizjon003.jprq.live/api/v1/ligues/list`)
-//   .then((res) => res.json())
-//   .then((json) => Setdata(json));
-//  }, []);
-//  console.log(data);
+  useEffect(() => {
+      axios.get('https://azizjon003.jprq.live/api/v1/ligues/list')
+      .then(res => {
+        console.log(res);
+        setTable(res.data.data)
+      })
+      .catch((error) => {
+        console.log(error.message);
+     });
+ }, []);
   
 
   return (

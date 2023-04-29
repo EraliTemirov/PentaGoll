@@ -9,14 +9,15 @@ const Section1 = () => {
       .then(res => {
         console.log(res);
         setUsers(res.data.data)
-
-
       })
+      .catch((error) => {
+        console.log(error.message);
+     });
  }, []);
 
   return (
     <div className='container1'>
-      
+
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
 
        
