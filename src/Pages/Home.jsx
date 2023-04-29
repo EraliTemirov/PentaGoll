@@ -10,7 +10,7 @@ import Footer from '../Components/Footer';
 
 const Home = () => {
   return (
-    <div>
+    <div className='eraliContainer'>
       <div className='Header'>
       <Header/>
       </div>

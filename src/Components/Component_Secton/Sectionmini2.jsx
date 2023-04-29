@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 const Sectionmini2 = () => {
+
+ useEffect(()=>{
+  let res =  axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list`)
+  .then((res) => res.json())
+  .then((json) => data(json));
+ }, [])
+  
+
   return (
     <div className='container'>
       <h2>Jadval</h2>
