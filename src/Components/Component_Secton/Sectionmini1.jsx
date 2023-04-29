@@ -14,21 +14,45 @@ const Sectionmini1 = () => {
       <div className='pt-3 d-flex  flex-wrap gap-1 justify-content-between'>
         <div className='w25'>
           <img src={ikki} alt="rasm"  className='w100' />
+          <div className='asos_text2'>
+      <p>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar </p>
+      <span>2 soat oldin</span>
+      </div>
         </div>
         <div className='w25'>
           <img src={ikki} alt="rasm" className='w100' />
+          <div className='asos_text2'>
+      <p>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar </p>
+      <span>2 soat oldin</span>
+      </div>
         </div>
         <div className='w25'>
           <img src={ikki} alt="rasm" className='w100' />
+          <div className='asos_text2'>
+      <p>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar </p>
+      <span>2 soat oldin</span>
+      </div>
         </div>
         <div className='w25'>
           <img src={ikki} alt="rasm"  className='w100' />
+          <div className='asos_text2'>
+      <p>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar </p>
+      <span>2 soat oldin</span>
+      </div>
         </div>
         <div className='w25'>
           <img src={ikki} alt="rasm" className='w100' />
+          <div className='asos_text2'>
+      <p>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar </p>
+      <span>2 soat oldin</span>
+      </div>
         </div>
         <div className='w25'>
           <img src={ikki} alt="rasm" className='w100' />
+          <div className='asos_text2'>
+      <p>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar </p>
+      <span>2 soat oldin</span>
+      </div>
         </div>
         
       </div>
