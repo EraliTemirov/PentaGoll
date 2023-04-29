@@ -5,7 +5,7 @@ import ikki from '../../Imgs/Rectangle 704.png';
 
 const Sectionmini1 = () => {
   return (
-    <div className='container '>
+    <div className='container1 '>
       <img src={bir} alt="rasm" className='w-100' />
       <div className='pt-3 d-flex  flex-wrap gap-1 justify-content-between'>
         <div className='w25'>

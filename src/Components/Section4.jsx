@@ -4,7 +4,7 @@ import rasm from "../Imgs/image 5.png";
 
 const Section4 = () => {
   return (
-    <div className='container '>
+    <div className='container1 '>
        <h3 className='section4'>So'ngi yangiliklar</h3>
        <div className='d-flex flex-wrap'>
         <div className='w-25 text-center p-3 color'>

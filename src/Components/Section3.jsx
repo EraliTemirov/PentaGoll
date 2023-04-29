@@ -4,7 +4,7 @@ import Sectionmini2 from './Component_Secton/Sectionmini2'
 
 const Section3 = () => {
   return (
-    <div className='d-flex container mt-5'>
+    <div className='d-flex container1 mt-5'>
       <div className='w-75'>
        <Sectionmini1/>
       </div>

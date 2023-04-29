@@ -1,17 +1,22 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 const Sectionmini2 = () => {
 
- useEffect(()=>{
-  let res =  axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list`)
+
+
+  const [data, Setdata] = useState([]);
+
+
+ useEffect(() => {
+  fetch(`https://azizjon003.jprq.live/api/v1/ligues/list`)
   .then((res) => res.json())
-  .then((json) => data(json));
- }, [])
+  .then((json) => Setdata(json));
+ }, []);
+ console.log(data);
   
 
   return (
-    <div className='container'>
+    <div className='container1'>
       <h2>Jadval</h2>
       <select name="name" id="name" className='form-control'>
         <option value="valiu">Italia.A seriya</option>

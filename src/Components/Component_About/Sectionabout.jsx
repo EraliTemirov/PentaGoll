@@ -3,7 +3,7 @@ import rasm from '../../Imgs/image 5 (1).png';
 
 const Sectionabout = () => {
   return (
-    <div className='container d-flex mt-3 gap-3 '>
+    <div className='container1 d-flex mt-3 gap-3 '>
        <div className='w-75 p-2'>
         <span >2 soat oldin</span>
         <h1 className='fs-3'>Faqatgina muvaffaqiyatli qur'a Rossiyani Jahon chempionatiga olib boradi: bo'g'inlar oldidagi barcha maketlar</h1>

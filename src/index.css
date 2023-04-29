@@ -23,3 +23,8 @@
     border: solid 2px #edeef0;
     background-color: #F4F5F7;
 }
+
+.container1{
+    width: 90%;
+    margin: 0 auto;
+}

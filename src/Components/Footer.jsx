@@ -10,7 +10,7 @@ import telegram from '../Imgs/Telegram.png';
 
 const Footer = () => {
   return (
-    <div className='container'>
+    <div className='container1'>
       <div className='d-flex p-5 justify-content-between' >
       <img src={logo} alt="logo"/>
       <div className='w-50 d-flex justify-content-evenly'>
@@ -36,7 +36,7 @@ const Footer = () => {
         <span className='d-block mt-3 fs-5'>Cybersport</span>
         </div>
       </div>
-      <div className='w-25 d-flex flex-wrap gap-4 '>
+      <div className='w-25 d-flex flex-wrap gap-4 container'>
        <img src={twetter} alt="logo" />
        <img src={youtube} alt="logo" />
        <img src={vkontact} alt="logo" />

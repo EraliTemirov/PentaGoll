@@ -4,7 +4,7 @@ import "../Sass/Section1.scss";
 const Section2 = () => {
   return (
     <div>
-        <div className='container'>
+        <div className='container1'>
       <div className='mt-4 d-flex section1_1 p-2 gap-2'>
         <button className='btn btn-success'>@ Italiya.Seriya A</button>
         <button className='btn btn-light'>@ Italiya.Seriya A</button>
