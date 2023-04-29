@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Admin_Home1 = () => {
+const Admin_Home_Yangilik = () => {
   return (
     <div className='container1 m-3'>
       <h2 className='container text-center'>Yangiliklar yuklash</h2>
@@ -22,4 +22,4 @@ const Admin_Home1 = () => {
   )
 }
 
-export default Admin_Home1
+export default Admin_Home_Yangilik;

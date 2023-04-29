@@ -1,8 +1,14 @@
 import React from 'react'
+import Footer from '../../Components/Footer';
+import Admin_Header from '../Admin_Header';
 
-const Admi_Home2 = () => {
+const Admin_Home_Jadval = () => {
   return (
-    <div className='container1 m-3 mt-5'>
+   <div>
+    <div className='Header'>
+        <Admin_Header/>
+      </div>
+     <div className='container1 m-3 mt-5'>
         <h2 className='container1 text-center'>Turnir jadvalini yuklash</h2>
       <div className='w-50 container p-3'>
         <form >
@@ -23,7 +29,11 @@ const Admi_Home2 = () => {
         </form>
       </div>
     </div>
+    <div className='Header'>
+   <Footer/>
+   </div>
+   </div>
   )
 }
 
-export default Admi_Home2;
+export default Admin_Home_Jadval;
