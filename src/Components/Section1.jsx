@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import "../Sass/Section1.scss";
-
+import axios from 'axios';
 const Section1 = () => {
+  const [users, setUsers] = useState([]);
 
-  const [data, Setdata] = useState([]);
-
-
-  // useEffect(() => {
-  //  fetch(`https://azizjon003.jprq.live/api/v1/ligues/list`)
-  //  .then((res) => res.json())
-  //  .then((json) => Setdata(json));
-  // }, []);
-  // console.log(data);
+  useEffect(() => {
+      axios.get('https://azizjon003.jprq.live/api/v1/ligues/list')
+      .then(res => {
+        console.log(res);
+        setUsers(res.data.data)
+      })
+ }, []);
 
   return (
     <div className='container1'>
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
-        {/* {data?.map((data, index)=>(
 
-          <button className='btn btn-success' key={index}>{data?.status}</button>
-          )   )} */}
+       
+        {users.map((post) => (
+            <h1>{post.name}</h1>
+          ))}
         
 
 

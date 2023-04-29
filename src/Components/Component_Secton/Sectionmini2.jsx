@@ -7,12 +7,12 @@ const Sectionmini2 = () => {
   const [data, Setdata] = useState([]);
 
 
- useEffect(() => {
-  fetch(`https://azizjon003.jprq.live/api/v1/ligues/list`)
-  .then((res) => res.json())
-  .then((json) => Setdata(json));
- }, []);
- console.log(data);
+//  useEffect(() => {
+//   fetch(`https://azizjon003.jprq.live/api/v1/ligues/list`)
+//   .then((res) => res.json())
+//   .then((json) => Setdata(json));
+//  }, []);
+//  console.log(data);
   
 
   return (
