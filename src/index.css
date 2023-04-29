@@ -7,3 +7,19 @@
     background-color: #469264;
 
 }
+.section4{
+    margin: 12px;
+    padding-left: 14px;
+    padding: 5px;
+    color: white;
+         border: solid #469264 2px;
+         border-radius: 12px;
+        background-color: #469264;
+    
+    
+}
+.color{
+    border-radius: 12px;
+    border: solid 2px #edeef0;
+    background-color: #F4F5F7;
+}
