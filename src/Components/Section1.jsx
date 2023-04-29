@@ -4,13 +4,17 @@ import axios from 'axios';
 const Section1 = () => {
   const [users, setUsers] = useState([]);
 
+
   useEffect(() => {
       axios.get('https://azizjon003.jprq.live/api/v1/ligues/list')
       .then(res => {
         console.log(res);
         setUsers(res.data.data)
 
-
+         
+      })
+      .catch((error)=>{
+        console.log(error.message);
       })
  }, []);
 
@@ -18,16 +22,9 @@ const Section1 = () => {
     <div className='container1'>
       
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
-
-       
         {users.map((post) => (
             <h1>{post.name}</h1>
           ))}
-        
-
-
-
-
         <button className='btn btn-light'>@ Italiya.Seriya A</button>
         <button  className='btn btn-light'>@ Italiya.Seriya A</button>
         <button  className='btn btn-light'>@ Italiya.Seriya A</button>

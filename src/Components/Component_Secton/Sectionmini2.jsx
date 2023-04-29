@@ -17,19 +17,25 @@ const Sectionmini2 = () => {
 
   return (
     <div className='container1'>
-      <h2>Jadval</h2>
+      <h2>Jadval </h2>
       <select name="name" id="name" className='form-control'>
         <option value="valiu">Italia.A seriya</option>
         <option value="valiu">Italia.A seriya</option>
         <option value="valiu">Italia.A seriya</option>
       </select>
       <table className='w-100 form-control'>
-  <tr className='fs-4' >
-    <th>N</th>
-    <th>Comanda</th>
+
+      <th>{data.status}</th>
+
+      {data?.map((data, index)=>(
+  <tr className='fs-4' key={index} >
+    <th>{data.data}</th>
+    <th>Scores</th>
     <th>O'yinlar</th>
     <th>Ballar</th>
   </tr>
+))}
+
   <tr className='fs-4' >
     <th>1</th>
     <td>Alfreds </td>
