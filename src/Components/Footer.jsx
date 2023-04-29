@@ -45,8 +45,8 @@ const Footer = () => {
        <img src={facebook} alt="logo" />
        <img src={telegram} alt="logo" />
       </div>
+      <hr className='fs-2 bg-light' />
       </div>
-      
     </div>
   )
 }
