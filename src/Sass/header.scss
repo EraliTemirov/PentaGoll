@@ -1,0 +1,9 @@
+.darkAndLight{
+    background: unset;
+    border: none;
+    img{
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
