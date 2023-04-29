@@ -17,6 +17,8 @@ const Admi_Home2 = () => {
 
        <label htmlFor="name_ikki" className='fs-4 mt-3'>Ikkinchi jamoa</label>
        <input type="text" id='name_ikki' className='form-control fs-5' />
+        
+        <input type="datetime-local" className='w-50 form-control mt-3' />
        <button className='btn btn-success w-25 m-3'>Yuklash</button>
         </form>
       </div>
@@ -24,4 +26,4 @@ const Admi_Home2 = () => {
   )
 }
 
-export default Admi_Home2
+export default Admi_Home2;

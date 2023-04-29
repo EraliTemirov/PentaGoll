@@ -36,7 +36,7 @@ const Footer = () => {
         <span className='d-block mt-3 fs-5'>Cybersport</span>
         </div>
       </div>
-      <div className='w-25 d-flex flex-wrap gap-4 container'>
+      <div className='w-25 d-flex flex-wrap gap-4'>
        <img src={twetter} alt="logo" />
        <img src={youtube} alt="logo" />
        <img src={vkontact} alt="logo" />
@@ -46,7 +46,8 @@ const Footer = () => {
        <img src={telegram} alt="logo" />
       </div>
       </div>
-      
+      <hr className=' p-1 m-2 form-control fs-1 bg-light'/>
+      <br />
     </div>
   )
 }

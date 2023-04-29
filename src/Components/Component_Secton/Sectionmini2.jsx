@@ -47,21 +47,21 @@ const Sectionmini2 = () => {
   return (
     <div className='container1'>
       <h2>Jadval </h2>
-      <select name="name" id="name" className='form-control' onChange={handleSelectChange}>
+      <select name="name" id="name" className='form-control fs-3' onChange={handleSelectChange}>
       {tables.map((post) => (
-        <option key={post._id} value={post._id}>{post.name}</option>
+        <option key={post._id} value={post._id}  >{post.name}</option>
       ))}
       </select>
       <table className='w-100 form-control'>
       <tr className='fs-4' >
           <th>№</th>
           <th>Команда </th>
-          <th>И</th>
+          <th className='p-3'>И</th>
           <th>O</th>
       </tr>
   {games.map((list,index) => (
       <tr className='fs-4' >
-          <td>{index+1}</td>
+          <td>{index+1} .</td>
           <td>{list.name} </td>
           <td>{list.numberMatches}</td>
           <td>{list.points}</td>

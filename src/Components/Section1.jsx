@@ -59,9 +59,10 @@ const Section1 = () => {
   return (
     <div className='container1'>
 
+       
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
-        {leagues.map((league) => (
-        <button  className='btn btn-light' onClick={handleButtonChange} value={league._id}>{league.name}</button>
+        {users.map((post) => (
+            <h1>{post.name}</h1>
           ))}
       </div>
       <div className='section1_1 d-flex justify-content-between mt-2 p-2 text-center app-row'>
