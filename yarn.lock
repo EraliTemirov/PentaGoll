@@ -210,10 +210,22 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@esbuild/linux-x64@0.17.18":
+"@emotion/is-prop-valid@^0.8.2":
+  version "0.8.8"
+  resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz"
+  integrity sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==
+  dependencies:
+    "@emotion/memoize" "0.7.4"
+
+"@emotion/memoize@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz"
+  integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
+
+"@esbuild/win32-x64@0.17.18":
   version "0.17.18"
-  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.17.18.tgz"
-  integrity sha512-66RmRsPlYy4jFl0vG80GcNRdirx4nVWAzJmXkevgphP1qf4dsLQCpSKGM3DUQCojwU1hnepI63gNZdrr02wHUA==
+  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.17.18.tgz"
+  integrity sha512-qU25Ma1I3NqTSHJUOKi9sAH1/Mzuvlke0ioMJRthLXKm7JiSKVwFghlGbDLOO2sARECGhja4xYfRAZNPAkooYg==
 
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
@@ -302,6 +314,75 @@
   dependencies:
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
+
+"@motionone/animation@^10.15.1":
+  version "10.15.1"
+  resolved "https://registry.npmjs.org/@motionone/animation/-/animation-10.15.1.tgz"
+  integrity sha512-mZcJxLjHor+bhcPuIFErMDNyrdb2vJur8lSfMCsuCB4UyV8ILZLvK+t+pg56erv8ud9xQGK/1OGPt10agPrCyQ==
+  dependencies:
+    "@motionone/easing" "^10.15.1"
+    "@motionone/types" "^10.15.1"
+    "@motionone/utils" "^10.15.1"
+    tslib "^2.3.1"
+
+"@motionone/dom@^10.15.5":
+  version "10.15.5"
+  resolved "https://registry.npmjs.org/@motionone/dom/-/dom-10.15.5.tgz"
+  integrity sha512-Xc5avlgyh3xukU9tydh9+8mB8+2zAq+WlLsC3eEIp7Ax7DnXgY7Bj/iv0a4X2R9z9ZFZiaXK3BO0xMYHKbAAdA==
+  dependencies:
+    "@motionone/animation" "^10.15.1"
+    "@motionone/generators" "^10.15.1"
+    "@motionone/types" "^10.15.1"
+    "@motionone/utils" "^10.15.1"
+    hey-listen "^1.0.8"
+    tslib "^2.3.1"
+
+"@motionone/easing@^10.15.1":
+  version "10.15.1"
+  resolved "https://registry.npmjs.org/@motionone/easing/-/easing-10.15.1.tgz"
+  integrity sha512-6hIHBSV+ZVehf9dcKZLT7p5PEKHGhDwky2k8RKkmOvUoYP3S+dXsKupyZpqx5apjd9f+php4vXk4LuS+ADsrWw==
+  dependencies:
+    "@motionone/utils" "^10.15.1"
+    tslib "^2.3.1"
+
+"@motionone/generators@^10.15.1":
+  version "10.15.1"
+  resolved "https://registry.npmjs.org/@motionone/generators/-/generators-10.15.1.tgz"
+  integrity sha512-67HLsvHJbw6cIbLA/o+gsm7h+6D4Sn7AUrB/GPxvujse1cGZ38F5H7DzoH7PhX+sjvtDnt2IhFYF2Zp1QTMKWQ==
+  dependencies:
+    "@motionone/types" "^10.15.1"
+    "@motionone/utils" "^10.15.1"
+    tslib "^2.3.1"
+
+"@motionone/svelte@^10.15.5":
+  version "10.15.5"
+  resolved "https://registry.npmjs.org/@motionone/svelte/-/svelte-10.15.5.tgz"
+  integrity sha512-Xyxtgp7BlVnSBwcoFmXGHUVnpNktzeXsEifu2NJJWc7VGuxutDsBZxNdz80qvpLIC5MeBa1wh7GGegZzTm1msg==
+  dependencies:
+    "@motionone/dom" "^10.15.5"
+    tslib "^2.3.1"
+
+"@motionone/types@^10.15.1":
+  version "10.15.1"
+  resolved "https://registry.npmjs.org/@motionone/types/-/types-10.15.1.tgz"
+  integrity sha512-iIUd/EgUsRZGrvW0jqdst8st7zKTzS9EsKkP+6c6n4MPZoQHwiHuVtTQLD6Kp0bsBLhNzKIBlHXponn/SDT4hA==
+
+"@motionone/utils@^10.15.1":
+  version "10.15.1"
+  resolved "https://registry.npmjs.org/@motionone/utils/-/utils-10.15.1.tgz"
+  integrity sha512-p0YncgU+iklvYr/Dq4NobTRdAPv9PveRDUXabPEeOjBLSO/1FNB2phNTZxOxpi1/GZwYpAoECEa0Wam+nsmhSw==
+  dependencies:
+    "@motionone/types" "^10.15.1"
+    hey-listen "^1.0.8"
+    tslib "^2.3.1"
+
+"@motionone/vue@^10.15.5":
+  version "10.15.5"
+  resolved "https://registry.npmjs.org/@motionone/vue/-/vue-10.15.5.tgz"
+  integrity sha512-cUENrLYAolUacHvCgU+8wF9OgSlVutfWbHMLERI/bElCJ+e2YVQvG/CpGhIM5fYOOJzuvg2T2wHmLLmvJoavEw==
+  dependencies:
+    "@motionone/dom" "^10.15.5"
+    tslib "^2.3.1"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -979,6 +1060,15 @@ form-data@^4.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
+framer-motion@^10.12.4:
+  version "10.12.4"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-10.12.4.tgz"
+  integrity sha512-9gLtv8T6dui0tujHROR+VM3kdJyKiFCFiD94IQE+0OuX6LaIyXtdVpviokVdrHSb1giWhmmX4yzoucALMx6mtw==
+  dependencies:
+    tslib "^2.4.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
@@ -1128,6 +1218,11 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+hey-listen@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/hey-listen/-/hey-listen-1.0.8.tgz"
+  integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
 
 hydro-js@^1.5.13:
   version "1.5.14"
@@ -1413,6 +1508,18 @@ minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
+motion@^10.15.5:
+  version "10.15.5"
+  resolved "https://registry.npmjs.org/motion/-/motion-10.15.5.tgz"
+  integrity sha512-ejP6KioN4pigTGxL93APzOnvtLklParL59UQB2T3HWXQBxFcIp5/7YXFmkgiA6pNKKzjvnLhnonRBN5iSFMnNw==
+  dependencies:
+    "@motionone/animation" "^10.15.1"
+    "@motionone/dom" "^10.15.5"
+    "@motionone/svelte" "^10.15.5"
+    "@motionone/types" "^10.15.1"
+    "@motionone/utils" "^10.15.1"
+    "@motionone/vue" "^10.15.5"
+
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
@@ -1611,7 +1718,7 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-dom@^18.2.0, react-dom@>=16.8:
+react-dom@^18.0.0, react-dom@^18.2.0, react-dom@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -1644,7 +1751,7 @@ react-router@6.11.0:
   dependencies:
     "@remix-run/router" "1.6.0"
 
-react@^18.2.0, react@>=16.8:
+react@^18.0.0, react@^18.2.0, react@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -1859,6 +1966,11 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+tslib@^2.3.1, tslib@^2.4.0:
+  version "2.5.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.5.0.tgz"
+  integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

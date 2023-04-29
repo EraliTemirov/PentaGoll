@@ -9,16 +9,11 @@ const Sectionmini2 = () => {
   function handleSelectChange(event) {    
     const selectedId = String(event.target.value);
     setSelectedProductId(selectedId);
-  
-    console.log(selectedId);
-    
-    
     axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list/${selectedId}?starttime=2022&endtime=2023`)
     .then(res => {
       const newArray = res.data.data[0].teams
       console.log(newArray);
       setGame(newArray)
-
     })
     .catch((error) => {
       console.log(error.message);
