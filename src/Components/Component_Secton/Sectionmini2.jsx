@@ -3,8 +3,28 @@ import axios from 'axios';
 
 const Sectionmini2 = () => {
   const [tables, setTable] = useState([]);
+  const [selectedProductId, setSelectedProductId] = useState(null);
   const [games, setGame] = useState([])
 
+  function handleSelectChange(event) {    
+    const selectedId = String(event.target.value);
+    setSelectedProductId(selectedId);
+  
+    console.log(selectedId);
+    
+    
+    axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list/${selectedId}?starttime=2022&endtime=2023`)
+    .then(res => {
+      const newArray = res.data.data[0].teams
+      console.log(newArray);
+      setGame(newArray)
+
+    })
+    .catch((error) => {
+      console.log(error.message);
+   });
+
+  }
   
   useEffect(() => {
       axios.get('https://azizjon003.jprq.live/api/v1/ligues/list')
@@ -15,26 +35,42 @@ const Sectionmini2 = () => {
       .catch((error) => {
         console.log(error.message);
      });
+
+     axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list/644d46e3a6fe14d40b89440e?starttime=2022&endtime=2023`)
+     .then(res => {
+       const newArray = res.data.data[0].teams
+       console.log(newArray);
+       setGame(newArray)
+ 
+     })
+     .catch((error) => {
+       console.log(error.message);
+    });
  }, []);
   
 
   return (
     <div className='container1'>
       <h2>Jadval </h2>
-      <select name="name" id="name" className='form-control'>
+      <select name="name" id="name" className='form-control' onChange={handleSelectChange}>
       {tables.map((post) => (
-        <option value="value" >{post.name}</option>
+        <option key={post._id} value={post._id}>{post.name}</option>
       ))}
       </select>
       <table className='w-100 form-control'>
-      
-  {tables.map((post) => (
       <tr className='fs-4' >
-        <th>1</th>
-        <td>{post.name} </td>
-        <td>15</td>
-        <td>14</td>
-  </tr>
+          <th>№</th>
+          <th>Команда </th>
+          <th>И</th>
+          <th>O</th>
+      </tr>
+  {games.map((list,index) => (
+      <tr className='fs-4' >
+          <td>{index+1}</td>
+          <td>{list.name} </td>
+          <td>{list.numberMatches}</td>
+          <td>{list.points}</td>
+      </tr>
       ))}
 </table>
     </div>
