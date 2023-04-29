@@ -5,7 +5,7 @@ import chiroq from '../Imgs/chiroq.svg';
 
 const Header = () => {
   return (
-    <div className='container d-flex'>
+    <div className='container d-flex  justify-content-between p-3'>
       <img src={logo} alt="logo" />
       <img src={chiroq} alt="button" />
     </div>
