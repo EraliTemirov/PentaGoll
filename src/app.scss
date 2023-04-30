@@ -43,6 +43,32 @@ div a{
 select{
     font-size: 18px;
 }
+.d-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section1_1 .btn-light{
+    display: flex;
+    img{
+        width: 28px;
+        height: 28px;
+        background-size: cover;
+        object-fit: contain;
+    }
+}
+.img-box{
+    height: 231px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-size: cover;
+    object-fit: contain;
+    margin-bottom: 23px;
+    img{
+        max-height: 231px;
+        min-height: 231px;
+    }
+}
 @for $i from 1 through 12 {
     .col-#{$i} { width: (100% / 12) * $i }
   }
