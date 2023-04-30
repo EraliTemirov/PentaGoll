@@ -9,11 +9,10 @@ const Section2 = () => {
 
   function handleButtonChange(event) {  
     console.log(event.target.value);  
-    const selectedId = '644dbf62a53d145b97af74b5'
-    // const selectedId = String(event.target.value)
+    const selectedId = String(event.target.value)
     setSelectedProductId(selectedId);
     console.log(selectedId);
-    axios.get(`https://azizjon003.jprq.live/api/v1/teams/${selectedId}`)
+    axios.get(`http://18.181.217.30:8080/api/v1/teams/${selectedId}`)
     .then(res => {
       const newArray = res.data.data[0].scores
       console.log(newArray);
@@ -27,7 +26,7 @@ const Section2 = () => {
 
   useEffect(() => {
     // get all leagues
-      axios.get('https://azizjon003.jprq.live/api/v1/ligues/list')
+      axios.get('http://18.181.217.30:8080/ligues/list')
       .then(res => {
         console.log(res);
         setLeague(res.data.data) 
@@ -44,7 +43,7 @@ const Section2 = () => {
       const selectedId = String(event.target.value)
       setSelectedProductId(selectedId);
       console.log(selectedId);
-      axios.get(`https://azizjon003.jprq.live/api/v1/teams/644dbf62a53d145b97af74b5`)
+      axios.get(`http://18.181.217.30:8080/teams/644dbf62a53d145b97af74b5`)
       .then(res => {
         const newArray = res.data.data[0].scores
         console.log(newArray);

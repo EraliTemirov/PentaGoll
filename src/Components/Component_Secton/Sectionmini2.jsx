@@ -3,13 +3,13 @@ import axios from 'axios';
 
 const Sectionmini2 = () => {
   const [tables, setTable] = useState([]);
-  const [selectedProductId, setSelectedProductId] = useState(null);
+  const [selectedProductId, setSelectedProductId] = useState("644dbf62a53d145b97af74b6");
   const [games, setGame] = useState([])
 
   function handleSelectChange(event) {    
     const selectedId = String(event.target.value);
     setSelectedProductId(selectedId);
-    axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list/${selectedId}?starttime=2022&endtime=2023`)
+    axios.get(`http://18.181.217.30:8080/api/v1/ligues/list/${selectedId}?starttime=2022&endtime=2023`)
     .then(res => {
       const newArray = res.data.data[0].teams
       console.log(newArray);
@@ -22,7 +22,7 @@ const Sectionmini2 = () => {
   }
   
   useEffect(() => {
-      axios.get('https://azizjon003.jprq.live/api/v1/ligues/list')
+      axios.get('http://18.181.217.30:8080/api/v1/ligues/list')
       .then(res => {
         console.log(res);
         setTable(res.data.data)
@@ -31,7 +31,7 @@ const Sectionmini2 = () => {
         console.log(error.message);
      });
 
-     axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list/644d46e3a6fe14d40b89440e?starttime=2022&endtime=2023`)
+     axios.get(`http://18.181.217.30:8080/api/v1/ligues/list/644d46e3a6fe14d40b89440e?starttime=2022&endtime=2023`)
      .then(res => {
        const newArray = res.data.data[0].teams
        console.log(newArray);

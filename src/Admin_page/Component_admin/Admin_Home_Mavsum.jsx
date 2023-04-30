@@ -19,7 +19,7 @@ const Admin_Home_Mavsum = () => {
         try {
           let {
             data: { data, status },
-          } = await axios.post(`https://azizjon003.jprq.live/api/v1/ligues/list`,
+          } = await axios.post(`http://18.181.217.30:8080/api/v1/ligues/list`,
             values
           );
     

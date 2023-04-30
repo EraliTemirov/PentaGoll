@@ -7,7 +7,7 @@ import axios from "axios"
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
-axios.defaults.baseURL = "https://azizjon003.jprq.live/api/v1";
+axios.defaults.baseURL = "http://18.181.217.30:8080";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
