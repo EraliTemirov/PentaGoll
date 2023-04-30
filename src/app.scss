@@ -25,6 +25,6 @@ div a{
         transform: scale(1.03);
     }
 }
-@for $i from 1 through 12 {
-    .col-#{$i} { width: (100% / 12) * $i }
-  }
+// @for $i from 1 through 12 {
+//     .col-#{$i} { width: (100% / 12) * $i }
+//   }

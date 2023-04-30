@@ -62,7 +62,7 @@ const Section1 = () => {
 
        
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
-        {users.map((post) => (
+        {leagues.map((post) => (
             <h1>{post.name}</h1>
           ))}
       </div>
