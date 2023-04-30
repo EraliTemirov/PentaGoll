@@ -7,8 +7,10 @@ const Section1 = () => {
   const [games, setGame] = useState([])
 
 
-  function handleButtonChange(event) {    
-    const selectedId = String(event.target.value)
+  function handleButtonChange(event) {  
+    console.log(event.target.value);  
+    const selectedId = '644dbf62a53d145b97af74b5'
+    // const selectedId = String(event.target.value)
     setSelectedProductId(selectedId);
     console.log(selectedId);
     axios.get(`https://azizjon003.jprq.live/api/v1/teams/${selectedId}`)
@@ -38,11 +40,11 @@ const Section1 = () => {
      });
 
     //  get single id league
-    function handleButtonChange() {    
+       
       const selectedId = String(event.target.value)
       setSelectedProductId(selectedId);
       console.log(selectedId);
-      axios.get(`https://azizjon003.jprq.live/api/v1/teams/644d46e3a6fe14d40b89440e`)
+      axios.get(`https://azizjon003.jprq.live/api/v1/teams/644dbf62a53d145b97af74b5`)
       .then(res => {
         const newArray = res.data.data[0].scores
         console.log(newArray);
@@ -51,8 +53,6 @@ const Section1 = () => {
       .catch((error) => {
         console.log(error.message);
      });
-  
-    }
  }, []);
 
 
@@ -62,7 +62,7 @@ const Section1 = () => {
 
        
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
-        {leagues.map((post) => (
+        {users.map((post) => (
             <h1>{post.name}</h1>
           ))}
       </div>
@@ -75,28 +75,6 @@ const Section1 = () => {
         </div>
         </div>
        ))}
-      </div>
-      <div className='section1_1 d-flex justify-content-between mt-2 p-2 text-center flex-wrap'>
-       <div>
-       <p className='d-block btn btn-light '>Barcelona 3:0 Liverpul</p>
-        <span>11.11.2021 23:59</span>
-       </div>
-       <div>
-       <p className='d-block btn btn-light '>Barcelona 3:0 Liverpul</p>
-        <span>11.11.2021 23:59</span>
-       </div>
-       <div>
-       <p className='d-block btn btn-light '>Barcelona 3:0 Liverpul</p>
-        <span>11.11.2021 23:59</span>
-       </div>
-       <div>
-       <p className='d-block btn btn-light '>Barcelona 3:0 Liverpul</p>
-        <span>11.11.2021 23:59</span>
-       </div>
-       <div>
-       <p className='d-block btn btn-light '>Barcelona 3:0 Liverpul</p>
-        <span>11.11.2021 23:59</span>
-       </div>
       </div>
     </div>
   )

@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 const Admin_Header = () => {
   return (
     <div className='container1 d-flex  justify-content-between p-3 align-items-center'>
-      <img src={logo} alt="logo" />
+      <button className='darkAndLight'>
+          <img src={logo} alt="logo" />
+      </button>
       <div className='w-50 d-flex justify-content-between'>
         
         <span className='fs-5'><Link to={"/admin"} >Yangiliklar</Link></span>
