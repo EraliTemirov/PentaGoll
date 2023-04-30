@@ -76,7 +76,7 @@ const Admin_Home_Jadval = () => {
         <option value="jamoa">{list.name}</option>
         ))}
       </select>
-
+         <input type="datetime-local"  className='d-block mt-3 form-control' />
       <button className='btn btn-success w-25 mt-4'>Yuklash</button>
       </form>
      <div className='Header text-start mt-5'>
