@@ -33,5 +33,11 @@
     font-size: 25px;
     width: 38%;
     position: absolute;
-    transform: translate(10%, -100%);
+    transform: translate(3%, -100%);
+}
+.asos_text2{
+    color: white;
+    width: 17%;
+    position: absolute;
+    transform: translate(3%, -100%);
 }
