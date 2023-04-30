@@ -1,38 +1,88 @@
-import React from 'react'
-import Footer from '../../Components/Footer';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Admin_Header from '../Admin_Header';
+import Footer from '../../Components/Footer';
 
 const Admin_Home_Jadval = () => {
+  const [tables, setTable] = useState([]);
+  const [selectedProductId, setSelectedProductId] = useState(null);
+  const [games, setGame] = useState([])
+
+  function handleSelectChange(event) {    
+    const selectedId = String(event.target.value);
+    setSelectedProductId(selectedId);
+    axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list/${selectedId}?starttime=2022&endtime=2023`)
+    .then(res => {
+      const newArray = res.data.data[0].teams
+      console.log(newArray);
+      setGame(newArray)
+    })
+    .catch((error) => {
+      console.log(error.message);
+   });
+
+  }
+  
+  useEffect(() => {
+      axios.get('https://azizjon003.jprq.live/api/v1/ligues/list')
+      .then(res => {
+        console.log(res);
+        setTable(res.data.data)
+      })
+      .catch((error) => {
+        console.log(error.message);
+     });
+
+     axios.get(`https://azizjon003.jprq.live/api/v1/ligues/list/644d46e3a6fe14d40b89440e?starttime=2022&endtime=2023`)
+     .then(res => {
+       const newArray = res.data.data[0].teams
+       console.log(newArray);
+       setGame(newArray)
+ 
+     })
+     .catch((error) => {
+       console.log(error.message);
+    });
+ }, []);
+  
+
   return (
-   <div>
-    <div className='Header'>
-        <Admin_Header/>
+    <div>
+      <div className='Header'>
+      <Admin_Header/>
       </div>
-     <div className='container1 m-3 mt-5'>
-        <h2 className='container1 text-center'>Turnir jadvalini yuklash</h2>
-      <div className='w-50 container p-3'>
-        <form >
-        <label htmlFor="name_bir" className='fs-4'>Birinchi jamoa</label>
-       <input type="text" id='name_bir' className='form-control fs-5' />
+      <form className='container mt-5'>
+      <h2>Jadval </h2>
+      <select name="name" id="name" className='form-control fs-3' onChange={handleSelectChange}>
+      {tables.map((post) => (
+        <option key={post._id} value={post._id} className='fs-5 form-control' >{post.name}</option>
+      ))}
+      </select>
 
-         <div className='mt-3 d-flex'>
-            <input type="number" className='form-control m-2'/>
-            <label className='fs-1' >:</label>
-            <input type="number" className='form-control m-2' />
-         </div>
+      <select name="jamoa" id="jamoa" className='form-control mt-3'>
+        {games.map((list, _id)=>(
 
-       <label htmlFor="name_ikki" className='fs-4 mt-3'>Ikkinchi jamoa</label>
-       <input type="text" id='name_ikki' className='form-control fs-5' />
+        <option value="jamoa">{list.name}</option>
+        ))}
+      </select>
+        <div className='d-flex mt-2'>
+          <input type="number"  className='form-control'/>
+          <input type="number" className='form-control' />
+        </div>
         
-        <input type="datetime-local" className='w-50 form-control mt-3' />
-       <button className='btn btn-success w-25 m-3'>Yuklash</button>
-        </form>
-      </div>
+        <select name="jamoa" id="jamoa" className='form-control mt-4'>
+        {games.map((list, _id)=>(
+
+        <option value="jamoa">{list.name}</option>
+        ))}
+      </select>
+
+      <button className='btn btn-success w-25 mt-4'>Yuklash</button>
+      </form>
+     <div className='Header text-start mt-5'>
+     <Footer/>
+     </div>
     </div>
-    <div className='Header'>
-   <Footer/>
-   </div>
-   </div>
   )
 }
 

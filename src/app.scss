@@ -26,6 +26,7 @@ div a{
         transform: scale(1.03);
     }
 }
+
 .footer div {
     img{
         cursor: pointer;
@@ -86,3 +87,4 @@ td{
 @for $i from 1 through 12 {
     .col-#{$i} { width: (100% / 12) * $i }
   }
+
