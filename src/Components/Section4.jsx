@@ -10,7 +10,7 @@ const Section4 = () => {
   const [games, setGame] = useState([])
 
   useEffect(() => {
-    axios.get('https://azizjon003.jprq.live/api/v1/news')
+    axios.get('http://18.181.217.30:8080/api/v1/news')
     .then(res => {
       console.log(res);
       setNews(res.data.data)
@@ -27,7 +27,7 @@ const Section4 = () => {
     // const selectedId = String(event.target.value)
   //   setSelectedProductId(selectedId);
   //   console.log(selectedId);
-  //   axios.get(`https://azizjon003.jprq.live/api/v1/teams/${selectedId}`)
+  //   axios.get(`http://18.181.217.30:8080/api/v1/teams/${selectedId}`)
   //   .then(res => {
   //     const newArray = res.data.data[0].scores
   //     console.log(newArray);

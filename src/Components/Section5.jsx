@@ -6,7 +6,7 @@ import axios from 'axios';
 const Section5 = () => {
   const [news, setNews] = useState([])
   useEffect(() => {
-    axios.get('https://azizjon003.jprq.live/api/v1/news')
+    axios.get('http://18.181.217.30:8080/api/v1/news')
     .then(res => {
       console.log(res);
       setNews(res.data.data)

@@ -21,6 +21,7 @@ div a{
     }
 }
 .home-box{
+    min-height: 410px;
     &:hover{
         transform: scale(1.03);
     }
@@ -69,6 +70,19 @@ select{
         max-height: 231px;
         min-height: 231px;
     }
+}
+tbody, td, tfoot, th, thead, tr {
+    padding: 0 12px
+}
+th:first-child,
+td:first-child{
+    padding:0 4px;
+}
+tbody, th, thead, tr {
+    font-size: 18px;
+}
+td{
+    font-size: 16px;
 }
 @for $i from 1 through 12 {
     .col-#{$i} { width: (100% / 12) * $i }
