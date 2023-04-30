@@ -3,40 +3,6 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 
 const SigIn = () => {
-    const url = ""
-    const [data, setData] = useState({
-        name: '',
-        iduser:'',
-        date: '',
-    })
-    function submit(e){
-        e.preventDefault();
-        axios.post(url,{
-            name: data.name,
-            date: data.date,
-            iduser:pareInt(data.iduser)
-        })
-        .then(res=> {
-            console.log(res.data);
-        })
-    }
-    function handle(e){
-        const newdata = {...data}
-        newdata[e.target.id] = e.target.value
-        setData(newdata)
-        console.log(newdata);
-    }
-  return (
-    <div>
-        <form action="" onSubmit={(e) => submit(e)}>
-            <input onChange={(e) => handle(e)} id="name" type="text" placeholder='name'/>
-            <input onChange={(e) => handle(e)} id='date' type="text"  placeholder='date' />
-            <input onChange={(e) => handle(e)} id='iduser' type="number" placeholder='iduser'/>
-        </form>
-    </div>
-  )
-}
-
   return (
     <>
     <div className='Header'>
