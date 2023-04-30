@@ -43,63 +43,6 @@ const Section4 = () => {
     <div className='container1 '>
        <h4 className='section4 ps-5 pt-2 pb-2'>So'ngi yangiliklar</h4>
        <div className='d-flex flex-wrap'>
-
-
-        <Link to={"/about"} className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunayted"ga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted" ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-        </Link>
-        <div className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunayted"ga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted" ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-        </div>
-        <div className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunayted"ga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted" ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-        </div>
-        <div className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunaytedga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-        </div>
-        <div className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunayted"ga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted" ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-        </div>
-        <div className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunayted"ga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted" ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-        </div>
-        <div className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunayted"ga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted" ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-        </div>
-        <div className='w-25 text-start p-4 color'>
-          <img src={rasm} alt="rasm" className='w-100' />
-          <span className='fs-5'>Zidan "Manchester Yunayted"ga Premer-ligaga tayyor emasligini aytdi</span>
-          <p>Zidan "Manchester Yunayted" ga Premer-ligaga tayyor emasligini aytdi </p>
-          <span>12.05.2021  12:54</span>
-
-    
-      
-      
-       
-        
-       </div>
-
         {news.map((item) => (
           <>
           <div className='col-3' onClick={handleBoxClick} key={item._id} value={item._id}>
@@ -120,7 +63,6 @@ const Section4 = () => {
         ))}
         <button className='btn btn-info form-control mt-5 m-3'>Barchasini ko'rish</button>
     </div>
-
     </div>
   )
 }

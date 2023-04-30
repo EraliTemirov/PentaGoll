@@ -10,7 +10,7 @@ formData.append("title", values.title);
 formData.append("description", values.description);
 
 try {
-  const response = await fetch("https://azizjon003.jprq.live/api/v1/news", {
+  const response = await fetch("http://18.181.217.30:8080/api/v1/news", {
     method: "POST",
     body: formData,
   });

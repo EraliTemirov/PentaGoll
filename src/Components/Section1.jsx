@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../Sass/Section1.scss";
 import axios from 'axios';
-const Section1 = () => {
+const Section1 = ({ id = 'default_id', name, price }) => {
   const [leagues, setLeague] = useState([]);
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [games, setGame] = useState([])
@@ -61,19 +61,19 @@ const Section1 = () => {
 
        
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
-        {users.map((post) => (
-            <h1>{post.name}</h1>
+        {leagues.map((post) => (
+            <button className='btn btn-light' onClick={handleButtonChange} key={post._id} value={post._id}>{post.name}</button>
           ))}
       </div>
       <div className='section1_1 d-flex justify-content-between mt-2 p-2 text-center app-row'>
        {games.map((game) => (
-        <div className='col-20'>
-        <div className="m-2">
-        <p className='d-block btn btn-light fz-14'>{game.homeTeamName} {game.homeTeamScore}:{game.awayTeamScore} {game.awayTeamName}</p>
-         <span>{new Date(`${game.startTime}`).toLocaleDateString()} {new Date(`${game.startTime}`).toLocaleTimeString()}</span>
-        </div>
-        </div>
-       ))}
+          <div className='col-20'>
+          <div className="m-2">
+          <p className='d-block btn btn-light fz-14'>{game.homeTeamName} {game.homeTeamScore}:{game.awayTeamScore} {game.awayTeamName}</p>
+           <span>{new Date(`${game.startTime}`).toLocaleDateString()} {new Date(`${game.startTime}`).toLocaleTimeString()}</span>
+          </div>
+          </div>
+         ))}
       </div>
     </div>
   )

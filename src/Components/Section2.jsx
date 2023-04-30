@@ -3,16 +3,16 @@ import "../Sass/Section1.scss";
 import axios from 'axios';
 const Section2 = () => {
   const [leagues, setLeague] = useState([]);
-  const [selectedProductId, setSelectedProductId] = useState("644dbf62a53d145b97af74b5");
+  const [selectedProductId, setSelectedProductId] = useState("644dbf62a53d145b97af74b6");
   const [games, setGame] = useState([])
 
 
   function handleButtonChange(event) {  
     console.log(event.target.value);  
     const selectedId = String(event.target.value)
-    setSelectedProductId(selectedId);
+    console.log(setSelectedProductId(selectedId));;
     console.log(selectedId);
-    axios.get(`http://18.181.217.30:8080/api/v1/teams/${selectedId}`)
+    axios.get(`http://18.181.217.30:8080/api/v1/teams/featured/${selectedId}`)
     .then(res => {
       const newArray = res.data.data[0].scores
       console.log(newArray);
@@ -26,7 +26,7 @@ const Section2 = () => {
 
   useEffect(() => {
     // get all leagues
-      axios.get('http://18.181.217.30:8080/ligues/list')
+      axios.get('http://18.181.217.30:8080/api/v1/ligues/list')
       .then(res => {
         console.log(res);
         setLeague(res.data.data) 
@@ -37,22 +37,7 @@ const Section2 = () => {
       .catch((error) => {
         console.log(error);
      });
-
-    //  get single id league
-       
-      const selectedId = String(event.target.value)
-      setSelectedProductId(selectedId);
-      console.log(selectedId);
-      axios.get(`http://18.181.217.30:8080/teams/644dbf62a53d145b97af74b5`)
-      .then(res => {
-        const newArray = res.data.data[0].scores
-        console.log(newArray);
-        setGame(newArray)
-      })
-      .catch((error) => {
-        console.log(error.message);
-     });
- }, []);
+ }, [selectedProductId]);
 
 
   return (
@@ -61,8 +46,10 @@ const Section2 = () => {
 
        
       <div className='mt-5 d-flex section1_1 p-2 gap-2'>
-        {leagues.map((league) => (
-            <button onClick={handleButtonChange} key={league._id} value={league._id} className='btn btn-light' >{league.name}</button>
+        {leagues.map((post) => (
+            <button className='btn btn-light' onClick={handleButtonChange} key={post._id} value={post._id}>
+              {post.name}
+            </button>
           ))}
       </div>
       <div className='section1_1 d-flex justify-content-between mt-2 p-2 text-center app-row'>

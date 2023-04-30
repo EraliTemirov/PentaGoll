@@ -8,6 +8,7 @@ import Admin_Home_Yangilik from "./Admin_page/Component_admin/Admin_Home_Yangili
 import Admin_Home_Mavsum from "./Admin_page/Component_admin/Admin_Home_Mavsum";
 import Admin_Home_Jadval from "./Admin_page/Component_admin/Admi_Home_Jadval";
 import './app.scss'
+import SigIn from "./Pages/SigIn";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/admin" element={<Admin_Home/>}/>
         <Route path="/adminmavsum" element={<Admin_Home_Mavsum/>} />
         <Route path="/adminjadval" element={<Admin_Home_Jadval/>} />
+        <Route path="/register" element={<SigIn/>} />
       </Routes>
       
   )
