@@ -1,4 +1,5 @@
 import React from 'react';
+
 import logo from '../Imgs/logo.svg';
 import twetter from '../Imgs/Twitter.svg';
 import youtube from '../Imgs/YouTube.png';
@@ -59,7 +60,7 @@ const Footer = () => {
             <img src={facebook} alt="logo" />
        </div>
        <div className="col-3">
-            <img src={telegram} alt="logo" />
+           <a href="#"> <img src={telegram} alt="logo" /></a>
        </div>
       </div>
       </div>
